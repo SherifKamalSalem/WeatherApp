@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yma-fp-v5q">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Data Source-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HistoryController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ePC-bC-U0k">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no Images, Press camera button to add one" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsR-HH-cEq">
+                                        <rect key="frame" x="20" y="335" width="374" height="104.5"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
+                                        <color key="textColor" red="0.36106164639999999" green="0.36106164639999999" blue="0.36106164639999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.7464310972" green="0.7464310972" blue="0.7464310972" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="fsR-HH-cEq" firstAttribute="leading" secondItem="ePC-bC-U0k" secondAttribute="leading" constant="20" id="3Ma-Cw-ewh"/>
+                                    <constraint firstAttribute="trailing" secondItem="fsR-HH-cEq" secondAttribute="trailing" constant="20" id="CLI-Bc-MRT"/>
+                                    <constraint firstItem="fsR-HH-cEq" firstAttribute="centerX" secondItem="ePC-bC-U0k" secondAttribute="centerX" id="sV3-7S-InK"/>
+                                    <constraint firstItem="fsR-HH-cEq" firstAttribute="centerY" secondItem="ePC-bC-U0k" secondAttribute="centerY" id="ufH-X2-lkq"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O5m-to-3Jc" customClass="FSPagerView" customModule="FSPagerView">
+                                <rect key="frame" x="20" y="185.5" width="374" height="525"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="yu5-Wc-2Q7"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="zxy-ee-Coc"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="O5m-to-3Jc" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="5ez-cN-3rM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ePC-bC-U0k" secondAttribute="trailing" id="INZ-ta-ptb"/>
+                            <constraint firstItem="ePC-bC-U0k" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="N1p-MG-Rep"/>
+                            <constraint firstItem="O5m-to-3Jc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ufp-RQ-4Sg"/>
+                            <constraint firstItem="ePC-bC-U0k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XgY-gw-DNS"/>
+                            <constraint firstItem="O5m-to-3Jc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bbn-Fk-qBt"/>
+                            <constraint firstItem="O5m-to-3Jc" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.585938" id="iNb-XB-21W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ePC-bC-U0k" secondAttribute="bottom" id="kOn-kb-tb4"/>
+                            <constraint firstItem="O5m-to-3Jc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="krH-c5-vNK"/>
+                            <constraint firstItem="O5m-to-3Jc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ldT-Nv-O0g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O5m-to-3Jc" secondAttribute="trailing" constant="20" id="zT6-no-XjM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Image History" id="pdh-mI-f9f">
+                        <barButtonItem key="rightBarButtonItem" image="camera.fill" catalog="system" id="RpQ-Lv-RS1">
+                            <connections>
+                                <action selector="cameraBtnPressed:" destination="BYZ-38-t0r" id="Tu3-76-2zY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emptyContentView" destination="ePC-bC-U0k" id="5EL-GO-kZ1"/>
+                        <outlet property="pagerImage" destination="O5m-to-3Jc" id="UKr-Gx-fDL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="84.375"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Kzh-Xh-3WT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yma-fp-v5q" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="n77-I4-Ikv">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Qea-OH-7JB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ax-Mg-knB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="84.375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera.fill" catalog="system" width="64" height="48"/>
+    </resources>
+</document>
